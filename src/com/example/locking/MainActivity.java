@@ -1,5 +1,6 @@
 package com.example.locking;
 
+import com.facebook.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,12 +20,38 @@ public class MainActivity extends Activity {
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER);
 		
 		
+		Button go_friends = (Button)findViewById(R.id.btn_friends);
+		go_friends.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, FriendsHost.class));
+    		
+			}	
+			
+		}
+		);
+		
+		
+		
 		Button go_gall = (Button)findViewById(R.id.button1);
 		go_gall.setOnClickListener(new Button.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(MainActivity.this, GalleryViewTest.class));
+    		
+			}	
+			
+		}
+		);
+		
+		Button fb = (Button)findViewById(R.id.btn_fb_login);
+		fb.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, LoginActivity.class));
     		
 			}	
 			
@@ -67,6 +94,8 @@ public class MainActivity extends Activity {
 		);
 
 	}
+	
+
 	
 
 	@Override

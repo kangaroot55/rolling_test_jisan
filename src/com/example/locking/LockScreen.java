@@ -1,5 +1,6 @@
 package com.example.locking;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Intent;
@@ -24,6 +25,9 @@ public class LockScreen extends Activity implements OnGestureListener{
     public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		ActionBar actionBar = getActionBar();
+        actionBar.hide();
+        
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER);
 		
 		setContentView(R.layout.lockscreen);
