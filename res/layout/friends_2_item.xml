@@ -9,17 +9,20 @@
         android:id="@+id/iv_friend_2_item_profilepic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_gallery" />
     
     <TextView
         android:id="@+id/tv_friend_2_item_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="5" />
 	
     <Button
         android:id="@+id/btn_friend_2_item_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
         android:text="추가" />
      
 </LinearLayout>

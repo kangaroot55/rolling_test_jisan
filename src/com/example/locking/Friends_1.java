@@ -20,10 +20,13 @@ public class Friends_1 extends Activity {
         
         ArrayList <Profile> list = new ArrayList<Profile>();
         
-        list.add(new Profile("sibal@naver.com","뭐","server.1"));
+        list.add(new Profile("what@naver.com","뭐","server.1"));
         list.add(new Profile("jisan@naver.com","송지산","server.3"));
         list.add(new Profile("seunghak@gmail.com","이승학","server.15"));
         list.add(new Profile("janghyuk@gmail.com","장혁","server.22"));
+        list.add(new Profile("1@naver.com","jason","server.3"));
+        list.add(new Profile("2@gmail.com","android","server.15"));
+        list.add(new Profile("3@gmail.com","jobs","server.22"));
         
         MyFriendsAdapter adapter = new MyFriendsAdapter(this, R.layout.friends_1_item, list);
         
@@ -65,7 +68,7 @@ public class Friends_1 extends Activity {
 				LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				convertView = inflater.inflate(itemLayout, parent, false);
 				TextView tv = (TextView) convertView.findViewById(R.id.tv_friend_1_item_name);
-				tv.setText(list.get(position).get_email());
+				tv.setText(list.get(position).get_name());
 				ImageView iv = (ImageView) convertView.findViewById(R.id.iv_friend_1_item_profilepic);
 			}
 			return convertView;

@@ -6,15 +6,13 @@
 
     <ImageView
         android:id="@+id/iv_friend_1_item_profilepic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:src="@android:drawable/ic_menu_gallery" />
-    
+
     <TextView
         android:id="@+id/tv_friend_1_item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    
-    
 
 </LinearLayout>

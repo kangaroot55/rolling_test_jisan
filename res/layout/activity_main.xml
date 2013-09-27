@@ -6,10 +6,10 @@
     tools:context=".MainActivity" >
 
 	<TextView
-        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RollingTest_Jisan"
+        android:layout_weight="5"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     
@@ -17,13 +17,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_fb_login"
-        android:layout_below="@+id/linearLayout1"
         android:text="잠금화면" />
    
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
         android:orientation="horizontal" >
         
         
@@ -47,11 +46,12 @@
         
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_friends"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Friends" />
+      <Button
+        android:id="@+id/btn_fb_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="페북로그인 Test" />
+    
 
     <Button
         android:id="@+id/button1"
@@ -59,12 +59,12 @@
         android:layout_height="wrap_content"
         android:text="갤러리" />
 
+  
+    
     <Button
-        android:id="@+id/btn_fb_login"
+        android:id="@+id/btn_friends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="페북로긴Test" />
-    
-
+        android:text="친구 추가 Layout" />
     
 </LinearLayout>

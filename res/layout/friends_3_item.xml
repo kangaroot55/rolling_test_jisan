@@ -9,12 +9,14 @@
         android:id="@+id/iv_friend_3_item_profilepic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_gallery" />
     
     <TextView
         android:id="@+id/tv_friend_3_item_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" 
+        android:layout_weight="3" />
 	
     <Button
         android:id="@+id/btn_friend_3_item_accept"

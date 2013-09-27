@@ -1,31 +1,21 @@
 package com.example.locking;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Observable;
-
-import com.example.locking.Friends_1.MyFriendsAdapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.database.DataSetObserver;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 public class Friends_2 extends Activity {
 
@@ -42,15 +32,16 @@ public class Friends_2 extends Activity {
 	}
 
 	@Override
-	public void onCreate(Bundle icicle) {
-		super.onCreate(icicle);
-
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_friends_2);
+			
 		List<Map<String, ?>> myapplist = new LinkedList<Map<String, ?>>();
 		List<Map<String, ?>> fblist = new LinkedList<Map<String, ?>>();
-		myapplist.add(createItem("sibal@naver.com","망할앱친구","server.1"));
+		myapplist.add(createItem("app1@naver.com","앱친구","server.1"));
         myapplist.add(createItem("jisan@naver.com","송지산","server.3"));
         
-        fblist.add(createItem("sibal@naver.com","뭐","server.1"));
+        fblist.add(createItem("what@naver.com","뭐","server.1"));
         fblist.add(createItem("jisan@naver.com","송지산","server.3"));
         fblist.add(createItem("seunghak@gmail.com","이승학","server.15"));
         fblist.add(createItem("janghyuk@gmail.com","장혁","server.22"));
@@ -62,10 +53,10 @@ public class Friends_2 extends Activity {
 		adapter.addSection("페이스북 친구 중 설치 안 된 사람", new SimpleAdapter(this, fblist, R.layout.friends_2_item, new String[] {
 				EMAIL, NAME, PROFILE_PIC }, new int[] { 0, R.id.tv_friend_2_item_name, 0}));
 
-		ListView list = new ListView(this);
+		ListView list = (ListView)findViewById(R.id.lv_findfriends);
+		
 		list.setAdapter(adapter);
-		this.setContentView(list);
-
+		
 	}
 
 	public class SeparatedListAdapter extends BaseAdapter {
