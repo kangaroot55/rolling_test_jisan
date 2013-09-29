@@ -13,6 +13,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class LoginActivity extends Activity{
@@ -32,6 +34,19 @@ public class LoginActivity extends Activity{
             }
         });
        
+        
+		
+        Button go_gall = (Button)findViewById(R.id.btn_login);
+		go_gall.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this, GalleryViewTest.class));
+    		
+			}	
+			
+		}
+		);
          
 //        // set permission list, Don't forget to add email
  //       authButton.setReadPermissions(Arrays.asList("basic_info","email"));

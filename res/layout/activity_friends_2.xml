@@ -4,19 +4,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
+   
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    
+	    <EditText
+	        android:id="@+id/et_search"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+
+	    </EditText>
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@android:drawable/ic_menu_search" />
+	
+    </LinearLayout>
+
+	
+    <ListView
+        android:id="@+id/lv_findfriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_weight="9">
+	</ListView>
+ 	
+ 	<Button
         android:id="@+id/btn_add_by_kakaotalk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFF00"
         android:text="카카오톡으로 초대하기" />
     
-    <ListView
-        android:id="@+id/lv_findfriends"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
-
     
 
 </LinearLayout>

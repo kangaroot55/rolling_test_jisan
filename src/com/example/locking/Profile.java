@@ -16,7 +16,7 @@ public class Profile {
 		return email;
 	}
 	public String get_name(){
-		return email;
+		return name;
 	}
 	public String get_profileurl(){
 		return profileurl;

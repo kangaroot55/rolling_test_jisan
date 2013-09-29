@@ -69,6 +69,8 @@ public class Friends_1 extends Activity {
 				convertView = inflater.inflate(itemLayout, parent, false);
 				TextView tv = (TextView) convertView.findViewById(R.id.tv_friend_1_item_name);
 				tv.setText(list.get(position).get_name());
+				TextView tv2 = (TextView) convertView.findViewById(R.id.tv_friend_1_item_email);
+				tv2.setText(list.get(position).get_email());
 				ImageView iv = (ImageView) convertView.findViewById(R.id.iv_friend_1_item_profilepic);
 			}
 			return convertView;

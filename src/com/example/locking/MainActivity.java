@@ -1,6 +1,5 @@
 package com.example.locking;
 
-import com.facebook.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,12 +33,12 @@ public class MainActivity extends Activity {
 		
 		
 		
-		Button go_gall = (Button)findViewById(R.id.button1);
-		go_gall.setOnClickListener(new Button.OnClickListener(){
+		Button go_appmain = (Button)findViewById(R.id.btn_appmain);
+        go_appmain.setOnClickListener(new Button.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this, GalleryViewTest.class));
+				startActivity(new Intent(MainActivity.this, LoginActivity.class));
     		
 			}	
 			

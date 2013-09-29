@@ -52,6 +52,15 @@
         <activity android:name="Friends_1"></activity>
         <activity android:name="Friends_2"></activity>
         <activity android:name="Friends_3"></activity>
+        <activity android:name="SettingActivity"></activity>
+        <activity android:name="CanvasTestActivity">
+            <intent-filter>
+		        <data android:scheme="kakaoLinkTest" android:host="test22" />
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.BROWSABLE" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+        </activity>
         
         
     </application>

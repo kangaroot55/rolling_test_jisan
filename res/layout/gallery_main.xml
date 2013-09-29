@@ -4,29 +4,34 @@
 	android:id="@+id/main"
 	android:orientation="vertical"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="#888888"
-	android:gravity="center_vertical|center">
+	android:layout_height="fill_parent">
 
-    <LinearLayout 
-    	android:layout_width="fill_parent"
-		android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+     	<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:layout_weight="3">
+		        <Button
+		            android:id="@+id/btn_menu"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="=" />
+		</LinearLayout>
 		
-        <Button
-            android:id="@+id/btn_menu"
+     	<Button
+            android:id="@+id/btn_bookadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="=" />
-
+            android:text="북 추가" />
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_friendadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="+" />
-        
- 	
- 	</LinearLayout>
+            android:text="친구 추가" />
+    </LinearLayout>
 	
 	<com.example.locking.MyGallery
 		android:id="@+id/Gallery01"

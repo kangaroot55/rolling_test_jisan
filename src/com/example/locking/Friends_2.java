@@ -45,6 +45,12 @@ public class Friends_2 extends Activity {
         fblist.add(createItem("jisan@naver.com","송지산","server.3"));
         fblist.add(createItem("seunghak@gmail.com","이승학","server.15"));
         fblist.add(createItem("janghyuk@gmail.com","장혁","server.22"));
+        fblist.add(createItem("jisan@naver.com","송지산","server.3"));
+        fblist.add(createItem("seunghak@gmail.com","이승학","server.15"));
+        fblist.add(createItem("janghyuk@gmail.com","장혁","server.22"));
+        fblist.add(createItem("jisan@naver.com","송지산","server.3"));
+        fblist.add(createItem("seunghak@gmail.com","이승학","server.15"));
+        fblist.add(createItem("janghyuk@gmail.com","장혁","server.22"));
 
         // create our list and custom adapter
 		SeparatedListAdapter adapter = new SeparatedListAdapter(this);
@@ -54,7 +60,6 @@ public class Friends_2 extends Activity {
 				EMAIL, NAME, PROFILE_PIC }, new int[] { 0, R.id.tv_friend_2_item_name, 0}));
 
 		ListView list = (ListView)findViewById(R.id.lv_findfriends);
-		
 		list.setAdapter(adapter);
 		
 	}
