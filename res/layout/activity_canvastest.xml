@@ -20,5 +20,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="카톡으로 앱링크 보내기" />
+
+	<com.facebook.widget.ProfilePictureView
+	    android:id="@+id/profilepicview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"/>
+
+	<TextView
+	    android:id="@+id/tv_test_friendlist"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="TextView" />
     
 </LinearLayout>

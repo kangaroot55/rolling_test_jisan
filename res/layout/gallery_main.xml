@@ -18,19 +18,19 @@
 		            android:id="@+id/btn_menu"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="=" />
+            		android:drawableLeft="@drawable/main_setting_down" />
 		</LinearLayout>
 		
      	<Button
             android:id="@+id/btn_bookadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="북 추가" />
+            android:drawableLeft="@drawable/main_new_book_down" />
         <Button
             android:id="@+id/btn_friendadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="친구 추가" />
+            android:drawableLeft="@drawable/main_friends_list_down" />
     </LinearLayout>
 	
 	<com.example.locking.MyGallery

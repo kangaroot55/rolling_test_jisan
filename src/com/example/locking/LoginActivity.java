@@ -1,5 +1,9 @@
 package com.example.locking;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import com.facebook.FacebookException;
 import com.facebook.Request;
 import com.facebook.Response;
@@ -11,10 +15,13 @@ import com.facebook.widget.LoginButton.OnErrorListener;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LoginActivity extends Activity{
@@ -35,6 +42,17 @@ public class LoginActivity extends Activity{
         });
        
         
+        Button go_signup = (Button)findViewById(R.id.btn_signup);
+        go_signup.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+    		
+			}	
+			
+		}
+		);
 		
         Button go_gall = (Button)findViewById(R.id.btn_login);
 		go_gall.setOnClickListener(new Button.OnClickListener(){
@@ -47,7 +65,8 @@ public class LoginActivity extends Activity{
 			
 		}
 		);
-         
+		
+ 
 //        // set permission list, Don't forget to add email
  //       authButton.setReadPermissions(Arrays.asList("basic_info","email"));
          
@@ -57,16 +76,20 @@ public class LoginActivity extends Activity{
         	@Override
             public void call(Session session, SessionState state, Exception exception) {
             	
+        		
                 if (session.isOpened()) {
                     Request.executeMeRequestAsync(session, new Request.GraphUserCallback() {
                         @Override
                         public void onCompleted(GraphUser user,Response response) {    
-                            if (user != null) { 
+
+                    		if (user != null) { 
                                 // 로그인 성공 (user에 정보가 들어있음.)
                             	Log.i(TAG,"User ID "+ user.getId());
                                 Log.i(TAG,"Email "+ user.asMap().get("email"));
                             	TextView tv = (TextView)findViewById(R.id.tv_welcome);
-                            	tv.setText(user.getId());
+                            	tv.setText(user.getUsername());
+                            	ImageView iv = (ImageView)findViewById(R.id.login_profile);
+
                             }
                         }
                     });
